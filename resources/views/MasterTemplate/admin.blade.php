@@ -34,7 +34,7 @@
 
       <ul class="top-right ">
         <li class="dropdown link">
-        <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><img src="{{asset('img/Worker ID')}}/{{Auth::user()->idPicture}}" alt="img"><b>{{ Auth::user()->firstName }} {{ Auth::user()->lastName }}</b><span class="caret"></span></a>
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"></b><span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-menu-list dropdown-menu-right ">
               <li>  <a href="/cpform">Change Password</a></li>
               <li>

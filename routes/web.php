@@ -12,36 +12,36 @@ Route::post('/custom/login', 'CustomLoginController@LoginValidation');
 
 //------------------------------------------------------------Admin Module-------------------------------------------------------
 //Admin DashBoard
-Route::get('/adminDashboard','AdminDashBoardController@index')->name('AdminDashBoard')->middleware('admin','pbh');
+Route::get('/adminDashboard','AdminDashBoardController@index')->name('AdminDashBoard');
 //Worker
-Route::resource('/adminWorker', 'AdminWorkerController')->middleware('admin','pbh');
-Route::post('/adminWorkerView', 'AdminWorkerController@view')->middleware('admin','pbh');
+Route::resource('/adminWorker', 'AdminWorkerController');
+Route::post('/adminWorkerView', 'AdminWorkerController@view');
 
 //Contract
-Route::get('/adminContract', 'AdminContractController@index')->middleware('admin','pbh');
+Route::get('/adminContract', 'AdminContractController@index');
 
 //Schedule
-Route::get('/adminSchedule', 'AdminScheduleController@index')->middleware('admin','pbh');
+Route::get('/adminSchedule', 'AdminScheduleController@index');
 
 //Location
 Route::resource('/adminLocation', 'LocationController');
 
 //Work
 Route::resource('/adminWork', 'WorkController');
-Route::put('/UpdateWork','WorkController@updateWork')->middleware('admin','pbh');
+Route::put('/UpdateWork','WorkController@updateWork');
 
 //Attendace
-Route::get('/adminUploadAttendance', 'AdminAttedanceController@uploadAttendace')->middleware('admin','pbh');
-Route::post('/adminSearchDTR','AdminAttedanceController@searhDTR')->middleware('admin','pbh');
+Route::get('/adminUploadAttendance', 'AdminAttedanceController@uploadAttendace');
+Route::post('/adminSearchDTR','AdminAttedanceController@searhDTR');
 
 //Salary
-Route::get('/adminSalaryIndex','AdminSalaryController@index')->middleware('admin','pbh');
-Route::post('/adminSalarySearch','AdminSalaryController@salarySearch')->middleware('admin','pbh');
-Route::post('/adminSalarEarn','AdminSalaryController@salaryEarn')->middleware('admin','pbh');
+Route::get('/adminSalaryIndex','AdminSalaryController@index');
+Route::post('/adminSalarySearch','AdminSalaryController@salarySearch');
+Route::post('/adminSalarEarn','AdminSalaryController@salaryEarn');
     
 //Passsword
-Route::get('/resetPasswordIndex','PasswordController@index')->middleware('admin','pbh');
-Route::put('/resetPassword','PasswordController@ResetPassword')->middleware('admin','pbh');
+Route::get('/resetPasswordIndex','PasswordController@index');
+Route::put('/resetPassword','PasswordController@ResetPassword');
 
 Route::get('/logs', 'LogsController@index');
 Route::post('/searchLogs', 'LogsController@search');
