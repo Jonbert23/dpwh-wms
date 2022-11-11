@@ -18,7 +18,7 @@ Route::resource('/adminWorker', 'AdminWorkerController')->middleware('admin','pb
 Route::post('/adminWorkerView', 'AdminWorkerController@view')->middleware('admin','pbh');
 
 //Contract
-Route::get('/adminContract', 'AdminContractController@index')->middleware('admin','pbh');
+Route::get('/adminContract', 'AdminContractController@index')->middleware('admin','pbh'); 
 
 //Schedule
 Route::get('/adminSchedule', 'AdminScheduleController@index')->middleware('admin','pbh');
